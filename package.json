@@ -3,9 +3,25 @@
 	"version": "1.0.0",
 	"description": "MagicMirror² module for Montpellier trams and buses (TaM), powered by the TamTramBus API: departures with the vehicle coming, and saved journeys",
 	"main": "MMM-TamTramBus.js",
-	"scripts": { "test": "node test.js" },
-	"keywords": ["MagicMirror", "Montpellier", "TaM", "tram", "bus", "transport"],
+	"scripts": {
+		"test": "node test.js"
+	},
+	"keywords": [
+		"MagicMirror",
+		"magicmirror2",
+		"Montpellier",
+		"TaM",
+		"tram",
+		"bus",
+		"transport"
+	],
 	"author": "Fabien Bounoir",
 	"license": "MIT",
-	"engines": { "node": ">=18" }
+	"engines": {
+		"node": ">=18"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FabienBounoir/MMM-TamTramBus.git"
+	}
 }

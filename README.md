@@ -1,13 +1,28 @@
 # MMM-TamTramBus
 
-Module [MagicMirror²](https://magicmirror.builders) pour les trams et bus de Montpellier (TaM), branché sur l'API [TamTramBus](https://tamtrambus.bounsbot.com) : temps réel, véhicule qui arrive, perturbations, et trajets enregistrés.
+Module [MagicMirror²](https://magicmirror.builders) pour les **trams et bus de Montpellier** (TaM), branché sur l'API [TamTramBus](https://tamtrambus.bounsbot.com) : passages en temps réel, image du véhicule qui arrive, perturbations et trajets enregistrés.
 
-Deux modes, une instance par mode (ou plusieurs) :
+<table>
+<tr>
+<th>Prochains passages (<code>departures</code>)</th>
+<th>Mes trajets (<code>journeys</code>)</th>
+</tr>
+<tr>
+<td valign="top"><img src="screenshots/departures.png" width="340" alt="Prochains passages à Gare Saint-Roch"></td>
+<td valign="top"><img src="screenshots/journeys.png" width="340" alt="Trajets depuis la Comédie vers Odysseum, Apollo et Gare Sud de France"></td>
+</tr>
+</table>
 
-- **`departures`** : les prochains passages à vos arrêts, avec l'image du tram ou du bus qui arrive (le vrai véhicule quand il est connu en temps réel, sinon celui de la ligne) et les perturbations de vos lignes.
-- **`journeys`** : vos trajets enregistrés depuis chez vous, avec l'heure à laquelle partir, correspondances comprises. Possibilité de viser une heure d'arrivée.
+## Fonctionnalités
 
-Les minutes restantes sont recalculées toutes les 15 secondes à partir des horaires exacts ; l'API est interrogée chaque minute (deux minutes pour les trajets). En cas de coupure, les derniers horaires reçus restent affichés.
+- 🚋 **Prochains passages** à vos arrêts, regroupés par ligne et direction, avec l'image du tram ou du bus qui arrive : le vrai véhicule quand il est suivi en temps réel (livrées spéciales comprises), sinon celui de la ligne.
+- 🗺️ **Trajets enregistrés** depuis chez vous : l'heure à laquelle partir, la marche jusqu'à l'arrêt, les correspondances, et les départs suivants. Possibilité de viser une heure d'arrivée (`arriveBy`).
+- ⚠️ **Perturbations** des lignes affichées uniquement.
+- ⏱️ Minutes restantes recalculées toutes les 15 secondes ; l'API est interrogée chaque minute (deux pour les trajets). En cas de coupure, les derniers horaires restent affichés.
+- 🎨 Design sobre, aux couleurs officielles des lignes, pensé pour se fondre avec les modules par défaut.
+- 🌍 Français et anglais. Aucune dépendance, aucune clé d'API.
+
+Une instance par mode : mettez-en plusieurs pour avoir les deux.
 
 ## Installation
 

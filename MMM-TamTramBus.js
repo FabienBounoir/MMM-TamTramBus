@@ -102,7 +102,7 @@ Module.register("MMM-TamTramBus", {
 				if (!main) return v;
 				const leave = this.mins(main.dep, now);
 				return Object.assign(v, {
-					leave: leave === 0 ? this.translate("LEAVE_NOW") : this.translate("LEAVE_IN", { time: leave >= 60 ? this.hhmm(main.dep) : leave + " min" }),
+					leave: leave === 0 ? this.translate("LEAVE_NOW") : leave >= 60 ? this.translate("LEAVE_AT", { time: this.hhmm(main.dep) }) : this.translate("LEAVE_IN", { time: leave + " min" }),
 					dep: this.hhmm(main.dep),
 					arr: this.hhmm(main.arr),
 					duration: Math.round(main.durationS / 60),

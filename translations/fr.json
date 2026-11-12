@@ -2,6 +2,7 @@
   "NEAR": "Proche",
   "NO_TRIP": "Aucun passage prévu",
   "LEAVE_IN": "Pars dans {time}",
+  "LEAVE_AT": "Pars à {time}",
   "LEAVE_NOW": "Pars maintenant",
   "CHANGE_AT": "Changement à {stop}",
   "THEN": "puis",

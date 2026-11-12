@@ -2,6 +2,7 @@
   "NEAR": "Due",
   "NO_TRIP": "No departure scheduled",
   "LEAVE_IN": "Leave in {time}",
+  "LEAVE_AT": "Leave at {time}",
   "LEAVE_NOW": "Leave now",
   "CHANGE_AT": "Change at {stop}",
   "THEN": "then",
