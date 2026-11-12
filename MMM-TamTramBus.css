@@ -1,0 +1,35 @@
+/* MMM-TamTramBus — plain MagicMirror look: text and greys, colour only on line badges and vehicles. */
+
+.ttb { width: 340px; max-width: 100%; text-align: left; color: #b3b3b3; line-height: 1.2; display: flex; flex-direction: column; gap: 18px; }
+
+.ttb-label { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #8a8a8a; margin-bottom: 8px; }
+.ttb-stop, .ttb-trip { display: flex; flex-direction: column; }
+.ttb-dep + .ttb-dep { margin-top: 10px; }
+
+.ttb-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.ttb-dest { flex: 1; min-width: 0; font-size: 22px; color: #d9d9d9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ttb-first { flex-shrink: 0; font-size: 22px; color: #fff; font-variant-numeric: tabular-nums; }
+.ttb-next { flex-shrink: 0; font-size: 18px; color: #8a8a8a; font-variant-numeric: tabular-nums; }
+.ttb-none { font-size: 18px; color: #8a8a8a; }
+.ttb-sub { display: flex; justify-content: space-between; gap: 10px; font-size: 15px; color: #8a8a8a; margin-top: 4px; }
+
+/* Line badges, shaped like in the app: tram = rounded square, trambus = wider, bus = circle */
+.ttb-badge { flex-shrink: 0; box-sizing: border-box; height: 24px; min-width: 24px; padding: 0 4px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 700; border-radius: 7px; }
+.ttb-bus { border-radius: 12px; }
+.ttb-trambus { min-width: 30px; }
+.ttb-dark { color: #000; }
+.ttb-chevron { color: #8a8a8a; font-size: 18px; margin: 0 -4px; }
+
+/* Vehicle: the whole bus, only the front of a tram */
+.ttb-vehicle { height: 30px; overflow: hidden; margin-bottom: 6px; }
+.ttb-vehicle img { height: 30px; display: block; opacity: 0.9; }
+.ttb-img-tram { width: 130px; object-fit: cover; object-position: right center; }
+
+/* Journeys */
+.ttb-trip-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.ttb-place { font-size: 24px; color: #fff; font-weight: 300; }
+.ttb-leave { font-size: 16px; color: #fff; white-space: nowrap; }
+
+/* Alerts */
+.ttb-alert { display: flex; align-items: baseline; gap: 8px; font-size: 14px; color: #8a8a8a; padding-top: 10px; border-top: 1px solid #333; }
+.ttb-alert .ttb-badge { height: 20px; min-width: 20px; font-size: 12px; }

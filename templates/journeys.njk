@@ -1,0 +1,34 @@
+{% macro badge(b) %}<span class="ttb-badge ttb-{{ b.shape }}{% if b.dark %} ttb-dark{% endif %}" style="background: {{ b.color }}">{{ b.n }}</span>{% endmacro %}
+
+<div class="ttb">
+{% if loading %}
+  <div class="dimmed small">{{ 'LOADING' | translate }}</div>
+{% else %}
+  {% for d in destinations %}
+    <div class="ttb-trip">
+      {% if d.arriveBy %}<div class="ttb-label">{{ 'ARRIVE_BY' | translate }} {{ d.arriveBy }}</div>{% endif %}
+      <div class="ttb-trip-head">
+        <span class="ttb-place">{{ d.name }}</span>
+        {% if d.leave %}<span class="ttb-leave">{{ d.leave }}</span>{% endif %}
+      </div>
+      {% if d.dep %}
+        {% if d.img %}
+          <div class="ttb-vehicle"><img class="{% if d.img.tram %}ttb-img-tram{% endif %}" src="{{ d.img.src }}" alt="" onerror="this.parentNode.style.display='none'"></div>
+        {% endif %}
+        <div class="ttb-row">
+          {% for b in d.badges %}{% if not loop.first %}<span class="ttb-chevron">›</span>{% endif %}{{ badge(b) }}{% endfor %}
+          <span class="ttb-first">{{ d.dep }}</span>
+          <span class="ttb-next">→ {{ d.arr }} · {{ d.duration }} min</span>
+        </div>
+        <div class="ttb-sub">
+          <span>{{ d.board }}{% if d.changes %} · {{ d.changes }}{% endif %}</span>
+          {% if d.others %}<span>{{ 'THEN' | translate }} {{ d.others }}</span>{% endif %}
+        </div>
+      {% else %}
+        <div class="ttb-none">{{ 'NO_TRIP' | translate }}</div>
+      {% endif %}
+      {% if d.walk %}<div class="ttb-sub">{{ 'ON_FOOT' | translate }} : {{ d.walk.mins }} min</div>{% endif %}
+    </div>
+  {% endfor %}
+{% endif %}
+</div>
