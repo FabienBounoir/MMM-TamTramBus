@@ -33,3 +33,5 @@
 /* Alerts */
 .ttb-alert { display: flex; align-items: baseline; gap: 8px; font-size: 14px; color: #8a8a8a; padding-top: 10px; border-top: 1px solid #333; }
 .ttb-alert .ttb-badge { height: 20px; min-width: 20px; font-size: 12px; }
+.ttb-ellipsis { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ttb-nowrap { flex-shrink: 0; white-space: nowrap; }

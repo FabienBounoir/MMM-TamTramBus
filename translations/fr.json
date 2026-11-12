@@ -3,7 +3,7 @@
   "NO_TRIP": "Aucun passage prévu",
   "LEAVE_IN": "Pars dans {time}",
   "LEAVE_NOW": "Pars maintenant",
-  "CHANGE_AT": "changement à {stop}",
+  "CHANGE_AT": "Changement à {stop}",
   "THEN": "puis",
   "ON_FOOT": "À pied",
   "ARRIVE_BY": "Arriver avant"

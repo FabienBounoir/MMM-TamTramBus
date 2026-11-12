@@ -21,9 +21,10 @@
           <span class="ttb-next">→ {{ d.arr }} · {{ d.duration }} min</span>
         </div>
         <div class="ttb-sub">
-          <span>{{ d.board }}{% if d.changes %} · {{ d.changes }}{% endif %}</span>
-          {% if d.others %}<span>{{ 'THEN' | translate }} {{ d.others }}</span>{% endif %}
+          <span class="ttb-ellipsis">{{ d.board }}</span>
+          {% if d.others %}<span class="ttb-nowrap">{{ 'THEN' | translate }} {{ d.others }}</span>{% endif %}
         </div>
+        {% if d.changes %}<div class="ttb-sub"><span class="ttb-ellipsis">{{ d.changes }}</span></div>{% endif %}
       {% else %}
         <div class="ttb-none">{{ 'NO_TRIP' | translate }}</div>
       {% endif %}

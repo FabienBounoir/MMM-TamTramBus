@@ -3,7 +3,7 @@
   "NO_TRIP": "No departure scheduled",
   "LEAVE_IN": "Leave in {time}",
   "LEAVE_NOW": "Leave now",
-  "CHANGE_AT": "change at {stop}",
+  "CHANGE_AT": "Change at {stop}",
   "THEN": "then",
   "ON_FOOT": "On foot",
   "ARRIVE_BY": "Arrive by"
